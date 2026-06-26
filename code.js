@@ -28,8 +28,9 @@ function playGame()
         result = "CRAPS - You Lose!";
     }
 
-    // Winning condition
-    else if(die1 === die2 && die1 % 2 === 0)
+    // LOGIC ERROR ADDED HERE FOR DEBUGGING ASSIGNMENT
+    // Should be even doubles, but this incorrectly checks for odd doubles
+    else if(die1 === die2 && die1 % 2 !== 0)
     {
         result = "You Won!";
     }
@@ -51,7 +52,6 @@ function playGame()
     // Call second function and pass the sum
     displayLuck(sum);
 }
-
 
 /*
     Function: displayLuck(total)
